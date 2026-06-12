@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/creative-design---logo-high-resolution-logo-transparent.png" type="image/x-icon">
+  <title>CreativeDesign</title>
+</head>
+<style>
+    /* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Rubik", sans-serif;
+  height: 100vh;
+}
+
+header {
+    background-color: #5c25e5;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+}
+
+#project-img {
+    border-radius: 15px;
+    width: 240px;
+}
+
+/* Layout Mobile First */
+
+/* Menu com Flexbox */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  margin: 5px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Introdução */
+.intro {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* Galeria com Grid */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.project {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+/* Rodapé com Flexbox */
+footer {
+    background-color: #aeaeae;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.social-links li a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Tablets (>= 600px) */
+@media (min-width: 600px) {
+  .navbar {
+    justify-content: space-around;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+    #project-img {
+    width: 155px;
+  }
+}
+
+/* Desktops (>= 1024px) */
+@media (min-width: 1024px) {
+  .navbar {
+    justify-content: flex-start;
+    gap: 50px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+</style>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo"><img src="img/creative-design---logo-high-resolution-logo-transparent.png" alt="logo" width="80px"></a>
+      <ul class="nav-links">
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Portfólio</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Bem-vindo à CreativeDesign</h1>
+      <p>Nós criamos designs inovadores para impulsionar sua marca.</p>
+    </section>
+
+    <section class="gallery">
+      <div class="project"><img src="img/_c92d830e-2ba2-4e51-b334-3aa48795b662.jpg" alt="imagem projeto 1" id="project-img">Projeto 1</div>
+      <div class="project"><img src="img/_c99ff1e3-2796-44c5-9ae6-e3791c857718.jpg" alt="imagem projeto 2" id="project-img">Projeto 2</div>
+      <div class="project"><img src="img/_dd7c01e1-21dc-4bc7-a2c3-fc107bf4c316.jpg" alt="imagem projeto 3" id="project-img">Projeto 3</div>
+      <div class="project"><img src="img/_9c8cb159-2749-49b3-bdd5-a6d0d5edfa71.jpg" alt="imagem projeto 4" id="project-img">Projeto 4</div>
+    </section>
+  </main>
+
+  <footer>
+    <ul class="social-links">
+      <li><a href="#"><img src="img/facebook-icon.png" alt="facebook-icon" width="60px"></a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
